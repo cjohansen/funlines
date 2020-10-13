@@ -4,6 +4,8 @@ Funlines is a small function pipelining library for Clojure. It allows you to
 break apart imperative bundles of nested `if`s into a sequence of functions to
 call, building up a context as you go.
 
+Examples and more docs are forthcoming.
+
 ## Install
 
 ```clj

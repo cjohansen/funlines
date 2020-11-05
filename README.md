@@ -9,10 +9,14 @@ Examples and more docs are forthcoming.
 ## Install
 
 ```clj
-{cjohansen/funlines {:mvn/version "2020.10.13"}}
+{cjohansen/funlines {:mvn/version "2020.11.05"}}
 ```
 
 ## Changelog
+
+### 2020.11.05
+
+Add `ok->`, `ok->>`, `failure->` and `failure->>` macros.
 
 ### 2020.10.13
 

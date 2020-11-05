@@ -80,3 +80,39 @@
         (if (ok? res)
           res
           (recur steps (conj results res)))))))
+
+(defmacro ok->
+  "Threads the successful pipeline result `x` through the forms. If `x` is a
+  pipeline failure, it is returned directly."
+  [x & forms]
+  `(let [res# ~x]
+     (if (ok? res#)
+       (-> res# ~@forms)
+       res#)))
+
+(defmacro ok->>
+  "Threads the successful pipeline result `x` through the forms. If `x` is a
+  pipeline failure, it is returned directly."
+  [x & forms]
+  `(let [res# ~x]
+     (if (ok? res#)
+       (->> res# ~@forms)
+       res#)))
+
+(defmacro failure->
+  "Threads the pipeline failure `x` through the forms. If `x` is not a pipeline
+  failure, it is returned directly."
+  [x & forms]
+  `(let [res# ~x]
+     (if (ok? res#)
+       res#
+       (-> res# ~@forms))))
+
+(defmacro failure->>
+  "Threads the pipeline failure `x` through the forms. If `x` is not a pipeline
+  failure, it is returned directly."
+  [x & forms]
+  `(let [res# ~x]
+     (if (ok? res#)
+       res#
+       (->> res# ~@forms))))

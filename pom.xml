@@ -4,7 +4,7 @@
   <packaging>jar</packaging>
   <groupId>cjohansen</groupId>
   <artifactId>funlines</artifactId>
-  <version>2020.10.13</version>
+  <version>2020.11.05</version>
   <name>funlines</name>
   <dependencies>
     <dependency>
@@ -33,7 +33,7 @@
   <scm>
     <connection>scm:git:git://github.com/cjohansen/funlines.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/cjohansen/funlines.git</developerConnection>
-    <tag>v2020.10.13</tag>
+    <tag>v2020.11.05</tag>
     <url>https://github.com/cjohansen/funlines</url>
   </scm>
 </project>
